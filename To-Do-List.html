@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 <html>
-<style>
-  h1 {text-align: center;}
-  .button {text-align: center;}
-  html {background-color: rgb(157, 206, 238);}
-  .a {background-color: rgb(78, 81, 249); 
+  <style>
+    h1 {text-align: center;}
+    .button {text-align: center;}
+    html {background-color: rgb(157, 206, 238);}
+    .a {background-color: rgb(78, 81, 249); 
     width: 300px; 
     height: 1000px;     
     width: 80%;
@@ -18,9 +18,10 @@
     border-radius: 25px;
   }
   .b {padding-top: 20px;}
-</style>
-<script>
-function Additem() {
+  </style>
+
+  <script>
+  function Additem() {
   var ul = document.getElementById("list");
   var input = document.getElementById("user");
   var li = document.createElement("li");
@@ -28,17 +29,17 @@ function Additem() {
   li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
   input.value = "";
-}
-function Removeitem() {
+  }
+  function Removeitem() {
   var ul = document.getElementById("list");
   var input = document.getElementById("user");
   var items = document.getElementById(input.value);
   ul.removeChild(items);
   input.value = "";
-}
-</script>
+  }
+  </script>
 
-<main>
+  <main>
     <div>
       <title>
         To do list
@@ -51,10 +52,12 @@ function Removeitem() {
         <button onclick="Additem()" class="buttonClass" >Add item</button>
         <button onclick="Removeitem()" class="buttonClass">Remove item</button>
       </div>
-    <div class="a">
-        <h2><ul class="b" id="list"></ul></h2>
+    <div class="a" >
+      <h2>
+        <ul class="b" id="list"></ul>
+      </h2>
     </div>
-</main>
+  </main>
 </html>
 
 
